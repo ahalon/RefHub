@@ -1,0 +1,93 @@
+# ==========================================
+# 1. PYTHON CACHE AND COMPILATION
+# ==========================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==========================================
+# 2. VIRTUAL ENVIRONMENTS
+# ==========================================
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ==========================================
+# 3. SECURITY AND SECRETS (CRITICAL)
+# ==========================================
+# Environment files containing database credentials and API keys
+.env
+.env.*
+!.env.example
+*.bak
+*.conf
+
+# ==========================================
+# 4. LOCAL DATABASES
+# ==========================================
+# Prevents committing local SQLite database files to the repository
+*.db
+*.sqlite
+*.sqlite3
+
+# ==========================================
+# 5. TESTING, QA, AND LINTER CACHES
+# ==========================================
+.htmlcov/
+.tox/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# ==========================================
+# 6. IDE AND OS SPECIFIC FILES
+# ==========================================
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# PyCharm / IntelliJ
+.idea/
+
+# Operating System garbage
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# 7. DOCKER AND CONTAINERS
+# ==========================================
+.dockerignore
+docker/volumes/
