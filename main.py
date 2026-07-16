@@ -18,7 +18,7 @@ app = FastAPI()
 
 @app.post("/referees")
 def create_referee(referee: schemas.RefereeCreate, db: Session = Depends(get_db)):
-    db_referee = Referee(
+    db_referee = RefereeDB(
         first_name = referee.first_name,
         last_name = referee.last_name,
         phone_number = referee.phone_number)
@@ -42,6 +42,19 @@ def retreive_referees_by_id(ref_id: int, db: Session = Depends(get_db)):
         )
     return ref
 
+
+@app.delete("/referees/{ref_id}")
+def delete_referee(ref_id: int, db: Session = Depends(get_db)):
+    ref = db.query(RefereeDB).filter(RefereeDB.id == ref_id).first()
+    if ref is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail= "Referee doesn't exist")
+
+    db.delete(ref)
+    db.commit()
+
+    return None
     
 
 
