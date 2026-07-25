@@ -1,5 +1,6 @@
 from database.database import Base
 from sqlalchemy import Column, String, Integer, DateTime, ForeignKey
+from sqlalchemy.orm import relationship
 
 class RefereeDB(Base):
     __tablename__ = "referee"
@@ -8,7 +9,7 @@ class RefereeDB(Base):
     last_name = Column(String)
     phone_number = Column(String, unique= True)
 
-class Match(Base):
+class MatchDB(Base):
     __tablename__ = "match"
     id = Column(Integer, primary_key=True)
     home_team = Column(String)
@@ -16,9 +17,12 @@ class Match(Base):
     date = Column(DateTime)
 
 
-class MatchAssignment(Base):
+class MatchAssignmentDB(Base):
     __tablename__ = "match_assignment"
     id = Column(Integer, primary_key=True, index=True)
     match_id = Column(Integer, ForeignKey("match.id"))
     ref_id = Column(Integer, ForeignKey("referee.id"))
     role = Column(String)
+
+    match = relationship(MatchDB)
+    referee = relationship(RefereeDB)
