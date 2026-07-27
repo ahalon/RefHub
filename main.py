@@ -16,12 +16,15 @@ def get_db():
 
 app = FastAPI()
 
-@app.post("/referees")
+# --- REFEREES ---
+
+@app.post("/referees", response_model=schemas.RefereeGet, status_code=status.HTTP_201_CREATED)
 def create_referee(referee: schemas.RefereeCreate, db: Session = Depends(get_db)):
     db_referee = RefereeDB(
-        first_name = referee.first_name,
-        last_name = referee.last_name,
-        phone_number = referee.phone_number)
+        first_name=referee.first_name,
+        last_name=referee.last_name,
+        phone_number=referee.phone_number
+    )
     db.add(db_referee)
     db.commit()
     db.refresh(db_referee)
@@ -29,51 +32,76 @@ def create_referee(referee: schemas.RefereeCreate, db: Session = Depends(get_db)
 
 @app.get("/referees", response_model=List[schemas.RefereeGet])
 def retrieve_referees(db: Session = Depends(get_db)):
-    refs = db.query(RefereeDB).all()
-    return refs
+    return db.query(RefereeDB).all()
 
 @app.get("/referees/{ref_id}", response_model=schemas.RefereeGet)
-def retreive_referees_by_id(ref_id: int, db: Session = Depends(get_db)):
-    ref= db.query(RefereeDB).filter(RefereeDB.id == ref_id).first()
+def retrieve_referee_by_id(ref_id: int, db: Session = Depends(get_db)):
+    ref = db.query(RefereeDB).filter(RefereeDB.id == ref_id).first()
     if ref is None:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail= "Referee doesn't exist"
+            detail="Referee doesn't exist"
         )
     return ref
 
+@app.patch("/referees/{ref_id}", response_model=schemas.RefereeGet)
+def update_referee(
+    ref_id: int,
+    referee_update: schemas.RefereeUpdate,
+    db: Session = Depends(get_db)
+):
+    db_referee = db.query(RefereeDB).filter(RefereeDB.id == ref_id).first()
 
-@app.delete("/referees/{ref_id}")
+    if db_referee is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Referee doesn't exist"
+        )
+
+    update_data = referee_update.model_dump(exclude_unset=True)
+
+    for key, value in update_data.items():
+        setattr(db_referee, key, value)
+
+    db.commit()
+    db.refresh(db_referee)
+    return db_referee
+
+@app.delete("/referees/{ref_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_referee(ref_id: int, db: Session = Depends(get_db)):
     ref = db.query(RefereeDB).filter(RefereeDB.id == ref_id).first()
     if ref is None:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail= "Referee doesn't exist")
+            detail="Referee doesn't exist"
+        )
 
     db.delete(ref)
     db.commit()
-
     return None
 
-@app.post("/matches/")
+# --- MATCHES ---
+
+@app.post("/matches", status_code=status.HTTP_201_CREATED)
 def add_match(match: schemas.MatchCreate, db: Session = Depends(get_db)):
     db_match = MatchDB(
-        home_team = match.home_team,
-        away_team = match.away_team,
-        date= match.date
+        home_team=match.home_team,
+        away_team=match.away_team,
+        date=match.date
     )
-
     db.add(db_match)
     db.commit()
     db.refresh(db_match)
     return db_match
 
-@app.post("/assignments", response_model=schemas.MatchAssignmentGet)
+# --- ASSIGNMENTS ---
+
+@app.post("/assignments", response_model=schemas.MatchAssignmentGet, status_code=status.HTTP_201_CREATED)
 def create_assignment(assignment: schemas.MatchAssignmentCreate, db: Session = Depends(get_db)):
     existing_assignment = db.query(MatchAssignmentDB).filter(
         MatchAssignmentDB.match_id == assignment.match_id,
-        MatchAssignmentDB.ref_id == assignment.ref_id).first()
+        MatchAssignmentDB.ref_id == assignment.ref_id
+    ).first()
 
     if existing_assignment:
         raise HTTPException(
@@ -90,7 +118,8 @@ def create_assignment(assignment: schemas.MatchAssignmentCreate, db: Session = D
 
     time_conflict = db.query(MatchAssignmentDB).join(MatchDB).filter(
         MatchAssignmentDB.ref_id == assignment.ref_id,
-        MatchDB.date == target_match.date).first()
+        MatchDB.date == target_match.date
+    ).first()
 
     if time_conflict:
         raise HTTPException(
@@ -108,44 +137,11 @@ def create_assignment(assignment: schemas.MatchAssignmentCreate, db: Session = D
     db.refresh(db_assignment)
     return db_assignment
 
-@app.get("/assignments", response_model = List[schemas.MatchAssignmentGet])
-def retrieve_assignment(ref_id: int =  None, db: Session = Depends(get_db)):
+@app.get("/assignments", response_model=List[schemas.MatchAssignmentGet])
+def retrieve_assignments(ref_id: int | None = None, db: Session = Depends(get_db)):
     assign = db.query(MatchAssignmentDB)
 
     if ref_id is not None:
-        assign= assign.filter(MatchAssignmentDB.ref_id == ref_id)
+        assign = assign.filter(MatchAssignmentDB.ref_id == ref_id)
 
     return assign.all()
-
-@app.patch("/referees/{ref_id}", response_model=schemas.RefereeGet)
-def update_referee(
-    ref_id: int,
-    referee_update: schemas.RefereeUpdate,
-    db: Session = Depends(get_db)
-):
-    db_referee = db.query(RefereeDB).filter(RefereeDB.id == ref_id).first()
-
-    if db_referee is None:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail= "Referee doesn't exist"
-        )
-
-    update_data = referee_update.model_dump(exclude_unset=True)
-
-    for key, value in update_data.items():
-        setattr(db_referee, key, value)
-
-    db.commit()
-    db.refresh(db_referee)
-
-    return db_referee
-
-    
-    
-
-
-
-@app.get("/")
-def Hello():
-    return {"message" : "Hello"}
