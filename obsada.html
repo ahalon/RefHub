@@ -1,0 +1,4674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <link rel="icon" type="image/png" href="/static/images/favicon.364e471c8002.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700;800&family=Courgette&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .base-brand-title {
+            font-family: 'Catamaran', sans-serif;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+    </style>
+    
+    <link rel="stylesheet" type="text/css" href="/static/css/castReferee.dc88cba02689.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+
+    <style>
+        :root {
+            --react-surface-bg: linear-gradient(135deg, rgba(184, 154, 0, 0.24), rgba(15, 15, 15, 0.94));
+            --react-surface-border: rgba(255, 215, 0, 0.28);
+            --react-surface-text: #ffffff;
+            --react-surface-hover: #f0d76a;
+            --react-menu-bg: linear-gradient(135deg, #5f510c, #0f0f0f);
+            --react-menu-hover: linear-gradient(135deg, rgba(184, 154, 0, 0.24), rgba(15, 15, 15, 0.94));
+            --react-menu-text: #ffffff;
+            --react-menu-accent: #f0cf68;
+            --react-button-bg: transparent;
+            --react-button-hover: linear-gradient(135deg, rgba(184, 154, 0, 0.24), rgba(15, 15, 15, 0.94));
+            --react-button-text: #ffffff;
+            --react-shadow: 0 18px 36px rgba(0, 0, 0, 0.32);
+        }
+
+        .naglowek {
+            background: var(--react-surface-bg) !important;
+            color: var(--react-surface-text) !important;
+            border-bottom: 2px solid var(--react-surface-border) !important;
+            box-shadow: var(--react-shadow);
+        }
+
+        .naglowek a,
+        .naglowek .link,
+        .naglowek .h2,
+        .naglowek .base-brand-title {
+            color: var(--react-surface-text) !important;
+            transition: color 0.2s ease;
+        }
+
+        .naglowek .h2 {
+            color: rgba(255, 255, 255, 0.88) !important;
+        }
+
+        .naglowek .base-brand-link:hover .base-brand-title {
+            color: var(--react-surface-hover) !important;
+        }
+
+        .naglowek .forhamburger > a.link:not(.base-brand-link) {
+            display: inline-flex;
+            align-items: center;
+            min-height: 52px;
+            padding: 0 18px;
+            border: 1px solid transparent;
+            border-radius: 18px;
+            transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .naglowek .messages {
+            color: inherit;
+        }
+
+        .naglowek .link:hover,
+        .naglowek .link:hover .fas,
+        .naglowek .link:hover .messages,
+        .naglowek #menuToggle:hover,
+        .naglowek #menuToggle:hover .fas {
+            color: var(--react-surface-hover) !important;
+        }
+
+        .naglowek .forhamburger > a.link:not(.base-brand-link):hover {
+            background: var(--react-surface-bg);
+            border-color: var(--react-surface-border);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.24);
+            transform: translateY(-1px);
+        }
+
+        .naglowek #menuToggle,
+        .naglowek .dropbtn3 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 14px;
+            background: var(--react-button-bg);
+            color: var(--react-button-text) !important;
+            border: 1px solid transparent;
+            border-radius: 14px;
+            box-shadow: none;
+            transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .naglowek #menuToggle:hover,
+        .naglowek .dropbtn3:hover {
+            background: var(--react-button-hover);
+            color: var(--react-menu-accent) !important;
+            border-color: var(--react-surface-border);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.24);
+            transform: translateY(-1px);
+        }
+
+        .naglowek .dropdown-content,
+        .naglowek .dropdown-content3 {
+            background: var(--react-menu-bg) !important;
+            background-color: #0f0f0f !important;
+            border: 1px solid rgba(184, 154, 0, 0.48);
+            border-radius: 18px;
+            padding: 8px;
+            overflow: hidden;
+            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
+        }
+
+        .naglowek .dropdown-content a,
+        .naglowek .dropdown-content3 a {
+            background: transparent !important;
+            color: var(--react-menu-text) !important;
+            border: 0 !important;
+            border-radius: 12px !important;
+            margin: 0;
+            padding: 10px 14px !important;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .naglowek .dropdown-content a + a,
+        .naglowek .dropdown-content3 a + a {
+            margin-top: 4px;
+        }
+
+        .naglowek .dropdown-content a:hover,
+        .naglowek .dropdown-content3 a:hover {
+            background: var(--react-menu-hover) !important;
+            color: var(--react-menu-accent) !important;
+            box-shadow: inset 0 0 0 1px rgba(255, 215, 0, 0.12);
+        }
+
+        @media screen and (max-width: 1210px) {
+            .naglowek .forhamburger > a.link:not(.base-brand-link) {
+                display: none !important;
+            }
+
+            .naglowek .h2 {
+                display: none !important;
+            }
+
+            .naglowek #menuToggle {
+                display: none !important;
+            }
+
+            .naglowek #MainLink,
+            .naglowek #MainLinkCaster,
+            .naglowek .base-brand-link {
+                display: block !important;
+            }
+        }
+    </style>
+
+    
+    
+</head>
+<body>
+    <div class="naglowek">
+        <div class="forhamburger">
+            
+            <a id="MainLink" class="link base-brand-link" href="/logged/"> <h1 class="base-brand-title">Łączy nas gwizdek</h1></a>
+            
+            
+            <h2 class="h2">Adam Hałoń</h2>
+            
+            <a class="link"><i class="fas fa-envelope"></i><span class="messages">Wiadomości</span></a>
+            <a class="link" href="/"><i class="fas fa-sign-out-alt"></i><span class="messages">Wyloguj się</span></a>
+            
+            <div id="dd" class="dropdown">
+                <a id="menuToggle" class="link" href="#">
+                    <i class="fas fa-cog"></i>
+                    <i class="fas fa-chevron-down fa-xs"></i>
+                </a>
+            <div class="dropdown-content">
+                <a href="/editReferee/">Edytuj dane</a>
+                
+                <a class="option2" href="/editPassword/">Zmień hasło</a>
+                
+            </div>
+                
+                <div class="dropdown3">
+                <button class="dropbtn3"><i class="fas fa-bars fa-2x"></i></button>
+                <div class="dropdown-content3">
+                    <a class="linkk" style="border-radius: 10px 0 0 0;">Wiadomości</a>
+                    <a href="/editReferee/">Edytuj dane</a>
+                    
+                    <a class="option2" href="/editPassword/">Zmień hasło</a>
+                    
+                    <a class="linkk" href="/" style="border-radius: 0 0 5px 10px;">Wyloguj się</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+
+<div id="refereeModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="refereeDetails">Szczegóły sędziego</p>
+  </div>
+</div>
+
+<form action="/castReferee2/" method="get">
+        <button type="submit" class="button">Pokaż poprzednią obsadę (Obsada 20)</button>
+</form>
+
+<div class="title-bar">
+    <h2 class="title">Obsada 21</h2>
+    <button id="toggleTable" class="table-toggle-btn">
+        <i class="fas fa-expand-arrows-alt"></i> Rozszerz
+    </button>
+</div>
+
+<div class="table-wrapper">
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th class="first">Lp</th>
+                <th>Drużyna Gospodarzy</th>
+                <th>Drużyna Gości</th>
+                <th style="width: 12% !important;">Data Meczu</th>
+                <th style="width: 10% !important;">Godzina Meczu</th>
+                <th style="width: 30% !important;">Adres Meczu</th>
+                <th>Sędzia Główny</th>
+                <th>Sędzia Asystent 1</th>
+                <th>Sędzia Asystent 2</th>
+                
+                    <th>Sędzia Techniczny</th>
+                
+                
+                
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #dbeafe; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    III Liga
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224854" style="background-color: ;">
+                    <td class="first">2</td>
+                    <td>JKS JAROSŁAW</td>
+                    <td>MKS Star Starachowice</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>16:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Jarosław">
+                            Jarosław
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12756">
+                            Miłosz Cygan
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14054">
+                            Bartłomiej Stepek
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12833">
+                            Daniel Witek
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #FFD700; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    IV Liga &quot;I Liga Śląska - InterHall&quot;
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224845" style="background-color: ;">
+                    <td class="first">4</td>
+                    <td>KS ROZWÓJ KATOWICE</td>
+                    <td>KS KUŹNIA USTROŃ</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>11:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="MOSiR &quot;Rozwój&quot; - sztuczne (Katowice, Adama Asnyka 27)">
+                            MOSiR &quot;Rozwój&quot; - sztuczne (Katowice, Adama Asnyka 27)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14219">
+                            Przemysław Stepek
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14019">
+                            Szymon Wiśniowski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13095">
+                            Gabriela Zabawa
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #FFD700; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    IV Liga &quot;Texom Małopolska 4. Liga&quot;
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224846" style="background-color: ;">
+                    <td class="first">6</td>
+                    <td>BKS Hal-Mont Bochnia</td>
+                    <td>Poprad Muszyna</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion im. Wł. Krupy (Bochnia, Parkowa 3)">
+                            Stadion im. Wł. Krupy (Bochnia, Parkowa 3)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13901">
+                            Jan Martowicz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14054">
+                            Bartłomiej Stepek
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13891">
+                            Marta Bodzioch
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #FF4500; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Piąta liga &quot;HAL-MONT Małopolska 5. Liga Wschód&quot; Grupa wsch.
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224847" style="background-color: ;">
+                    <td class="first">8</td>
+                    <td>Gród Podegrodzie</td>
+                    <td>Kolejarz Stróże</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>16:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="KS GRÓD (Podegrodzie 427)">
+                            KS GRÓD (Podegrodzie 427)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13921">
+                            Jakub Bryl
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13895">
+                            Mariusz KUŚ
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13889">
+                            Mateusz Różycki
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #FF4500; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Piąta liga &quot;HAL-MONT Małopolska 5. Liga Zachód&quot; Grupa zach.
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224848" style="background-color: ;">
+                    <td class="first">10</td>
+                    <td>Wróblowianka Kraków</td>
+                    <td>Kabel Kraków</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Wróblowianka (Kraków, Wróblowicka 58)">
+                            Wróblowianka (Kraków, Wróblowicka 58)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13900">
+                            Sebastian Wiśniowski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13923">
+                            Mateusz Łabno
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30552">
+                            Krzysztof Martowicz
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #32CD32; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    I Liga Kobiet
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224853" style="background-color: ;">
+                    <td class="first">12</td>
+                    <td>Hydrotruck Czwórka Radom</td>
+                    <td>KS GOHU Myszków</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>16:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Radom">
+                            Radom
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13906">
+                            Sylwia Wiatr
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13891">
+                            Marta Bodzioch
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #32CD32; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Żabno: Klasa okręgowa &quot;Zabno-Tarnów&quot;
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224767" style="background-color: ;">
+                    <td class="first">14</td>
+                    <td>Klub Sportowy ZKS Unia Tarnów</td>
+                    <td>Ładna</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>16:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion TOSiR (Tarnów, Józefa Piłsudskiego 32)">
+                            Stadion TOSiR (Tarnów, Józefa Piłsudskiego 32)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13889">
+                            Mateusz Różycki
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12752">
+                            Jarosław Wroński
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14092">
+                            Miłosz Różycki
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224768" style="background-color: ;">
+                    <td class="first">15</td>
+                    <td>LKS Łęgovia</td>
+                    <td>Dunajec Zakliczyn</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Łęgovia (Łęg Tarnowski, Sportowa 2)">
+                            Łęgovia (Łęg Tarnowski, Sportowa 2)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13988">
+                            Łukasz Dynarowicz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13907">
+                            Jarosław Nosek
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14119">
+                            Marcin Drzyzga
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224769" style="background-color: ;">
+                    <td class="first">16</td>
+                    <td>GKS Wierzchosławice</td>
+                    <td>Ikar Odporyszów</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LKS Gosłavia Gosławice (Gosławice 106)">
+                            LKS Gosłavia Gosławice (Gosławice 106)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14019">
+                            Szymon Wiśniowski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14219">
+                            Przemysław Stepek
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13095">
+                            Gabriela Zabawa
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224770" style="background-color: ;">
+                    <td class="first">17</td>
+                    <td>Wisła Szczucin</td>
+                    <td>ISKRA DĄBROWKI BR.</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>17:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion Wisła Szczucin (Szczucin, Witosa 5)">
+                            Stadion Wisła Szczucin (Szczucin, Witosa 5)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13920">
+                            Grzegorz Wroński
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12762">
+                            Grzegorz Dolasiński
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    
+                        #FF6666
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14086">
+                            Vadzim Raksa
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224771" style="background-color: ;">
+                    <td class="first">18</td>
+                    <td>GKS Gromnik</td>
+                    <td>LUKS Radłovia Radłów</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="GKS Gromnik (Gromnik, Sportowa 2)">
+                            GKS Gromnik (Gromnik, Sportowa 2)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13890">
+                            Daniel Bołoz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13986">
+                            Marcin Madejski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13897">
+                            Michał Ślaski
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #1E90FF; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: Klasa A
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224772" style="background-color: ;">
+                    <td class="first">20</td>
+                    <td>KS Koszyce Wielkie</td>
+                    <td>LKS Szynwałd</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>15:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Boisko sportowe (Koszyce Wielkie, Szkolna 22)">
+                            Boisko sportowe (Koszyce Wielkie, Szkolna 22)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12754">
+                            Jakub Jachym
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13897">
+                            Michał Ślaski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13986">
+                            Marcin Madejski
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224773" style="background-color: ;">
+                    <td class="first">21</td>
+                    <td>Ciężkowianka Ciężkowice</td>
+                    <td>LKS Zgłobice</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>16:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion Sportowy Ciężkowianki Ciężkowice (Ciężkowice, Krynicka 10)">
+                            Stadion Sportowy Ciężkowianki Ciężkowice (Ciężkowice, Krynicka 10)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13895">
+                            Mariusz KUŚ
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13923">
+                            Mateusz Łabno
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13921">
+                            Jakub Bryl
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224774" style="background-color: ;">
+                    <td class="first">22</td>
+                    <td>Wolania II Wola Rzędzińska</td>
+                    <td>Tarnovia II Tarnów</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>17:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LKS WOLANIA WOLA RZĘDZIŃSKA STADION SPORTOWY ZE SZTUCZNĄ MURAWĄ (Wola Rzędzińska 435 D)">
+                            LKS WOLANIA WOLA RZĘDZIŃSKA STADION SPORTOWY ZE SZTUCZNĄ MURAWĄ (Wola Rzędzińska 435 D)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13900">
+                            Sebastian Wiśniowski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13890">
+                            Daniel Bołoz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13901">
+                            Jan Martowicz
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224775" style="background-color: ;">
+                    <td class="first">23</td>
+                    <td>KS Radlna</td>
+                    <td>Pogoria Pogórska Wola</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>12:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="KS Radlna (Radlna 59B)">
+                            KS Radlna (Radlna 59B)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14089">
+                            Zbigniew Sieminski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12833">
+                            Daniel Witek
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13896">
+                            Adrian Jasiak
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224776" style="background-color: ;">
+                    <td class="first">24</td>
+                    <td>KS Rzuchowa</td>
+                    <td>GKS Wierzchosławice II</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>12:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="KS Rzuchowa (Rzuchowa 17)">
+                            KS Rzuchowa (Rzuchowa 17)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13923">
+                            Mateusz Łabno
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13900">
+                            Sebastian Wiśniowski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30552">
+                            Krzysztof Martowicz
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #1E90FF; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Żabno: Klasa A
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224777" style="background-color: ;">
+                    <td class="first">26</td>
+                    <td>Łukovia Łukowa</td>
+                    <td>Wola Radłowska</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="ŁUKOVIA (Łukowa 83a)">
+                            ŁUKOVIA (Łukowa 83a)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14053">
+                            Marek Krakowski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14092">
+                            Miłosz Różycki
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13557">
+                            Dominik Stolarz
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224778" style="background-color: ;">
+                    <td class="first">27</td>
+                    <td>KS NIWKA</td>
+                    <td>Wolania Wola Żelichowska</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>18:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="KS Niwka (Niwka 25)">
+                            KS Niwka (Niwka 25)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12750">
+                            Wiktor Hajduk
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12756">
+                            Miłosz Cygan
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12833">
+                            Daniel Witek
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #8A2BE2; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: Klasa B Grupa 1
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224779" style="background-color: ;">
+                    <td class="first">29</td>
+                    <td>Victoria Koszyce Małe</td>
+                    <td>Olimpia Wojnicz</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>14:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Victoria Koszyce Małe (Koszyce Małe, Główna 20)">
+                            Victoria Koszyce Małe (Koszyce Małe, Główna 20)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13557">
+                            Dominik Stolarz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14119">
+                            Marcin Drzyzga
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14053">
+                            Marek Krakowski
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224780" style="background-color: ;">
+                    <td class="first">30</td>
+                    <td>KS Koszyce Wielkie II</td>
+                    <td>Dunajec II Zbylitowska Góra</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>11:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion sportowy (Wola Rzędzińska 435 D)">
+                            Stadion sportowy (Wola Rzędzińska 435 D)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12762">
+                            Grzegorz Dolasiński
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30552">
+                            Krzysztof Martowicz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30189">
+                            Dariusz Roślicki
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224781" style="background-color: ;">
+                    <td class="first">31</td>
+                    <td>Błękitni 1947 Tarnów</td>
+                    <td>Iskra Tarnów</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>11:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion Sportowy TOSiR (Tarnów, Józefa Piłsudskiego 32)">
+                            Stadion Sportowy TOSiR (Tarnów, Józefa Piłsudskiego 32)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14119">
+                            Marcin Drzyzga
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30189">
+                            Dariusz Roślicki
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14093">
+                            Michał Hałoń
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224782" style="background-color: ;">
+                    <td class="first">32</td>
+                    <td>Westovia Tarnów</td>
+                    <td>AP English Football Zakliczyn</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>14:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion Sportowy TOSiR (Tarnów, Józefa Piłsudskiego 32)">
+                            Stadion Sportowy TOSiR (Tarnów, Józefa Piłsudskiego 32)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13907">
+                            Jarosław Nosek
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30421">
+                            Patryk Fasula
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30124">
+                            Paweł Roślicki
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224783" style="background-color: ;">
+                    <td class="first">33</td>
+                    <td>Dunajec Mikołajowice</td>
+                    <td>KS US Śmigno</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LKS Dunajec Mikołajowice (Mikołajowice 199)">
+                            LKS Dunajec Mikołajowice (Mikołajowice 199)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12752">
+                            Jarosław Wroński
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30717">
+                            Michał Chorąży
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30189">
+                            Dariusz Roślicki
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #8A2BE2; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: Klasa B Grupa 2
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224784" style="background-color: ;">
+                    <td class="first">35</td>
+                    <td>KS Łękawica</td>
+                    <td>LKS Szynwałd II</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Łękawica (Łękawica 58A)">
+                            Łękawica (Łękawica 58A)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14184">
+                            Tomasz Słowik
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14093">
+                            Michał Hałoń
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30552">
+                            Krzysztof Martowicz
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224785" style="background-color: ;">
+                    <td class="first">36</td>
+                    <td>LKS Olszyny</td>
+                    <td>LUKS Skrzyszów II</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Olszyny (Olszyny 62)">
+                            Olszyny (Olszyny 62)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12761">
+                            Jakub Cichy
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12753">
+                            Filip Pinas
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30124">
+                            Paweł Roślicki
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224786" style="background-color: ;">
+                    <td class="first">37</td>
+                    <td>Liwocz Szerzyny</td>
+                    <td>WKS Siemiechów</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>11:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion Sportowy (Szerzyny 594)">
+                            Stadion Sportowy (Szerzyny 594)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14219">
+                            Przemysław Stepek
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14019">
+                            Szymon Wiśniowski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13892">
+                            Dominik Hołda
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224787" style="background-color: ;">
+                    <td class="first">38</td>
+                    <td>KS Rzepiennik Strzyżewski</td>
+                    <td>KS Tarnowiec</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="KS Rzepiennik Strzyżewski (Rzepiennik Strzyżewski 400)">
+                            KS Rzepiennik Strzyżewski (Rzepiennik Strzyżewski 400)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13892">
+                            Dominik Hołda
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14019">
+                            Szymon Wiśniowski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14184">
+                            Tomasz Słowik
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224788" style="background-color: ;">
+                    <td class="first">39</td>
+                    <td>KS Ryglice</td>
+                    <td>Alfa Siedliska</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>17:45</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="KS RYGLICE - Joniny (Joniny )">
+                            KS RYGLICE - Joniny (Joniny )
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14091">
+                            Kamil Wójcikowski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12753">
+                            Filip Pinas
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14220">
+                            Arkadiusz Truchan
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224789" style="background-color: ;">
+                    <td class="first">40</td>
+                    <td>Alfa Siedliska</td>
+                    <td>KS Łękawica</td>
+                    <td>4 września 2026</td>
+                    <td>19:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion Stawiska w Siedliskach (Siedliska 415)">
+                            Stadion Stawiska w Siedliskach (Siedliska 415)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14019">
+                            Szymon Wiśniowski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14184">
+                            Tomasz Słowik
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13892">
+                            Dominik Hołda
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Brzesko: I liga okręgowa B1Junir Młodszy :WSCHÓD II&quot;
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="227006" style="background-color: ;">
+                    <td class="first">42</td>
+                    <td>Beskid Żegocina</td>
+                    <td>Kłos Łysa Góra</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>10:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Kłos Łysa Góra (Łysa Góra 396)">
+                            Kłos Łysa Góra (Łysa Góra 396)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13897">
+                            Michał Ślaski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13923">
+                            Mateusz Łabno
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14119">
+                            Marcin Drzyzga
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    CLJ - U18
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="227005" style="background-color: ;">
+                    <td class="first">44</td>
+                    <td>UKS 3 FAKRO Jelna</td>
+                    <td>UKKS Katowice</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>11:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Jelna">
+                            Jelna
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13906">
+                            Sylwia Wiatr
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13895">
+                            Mariusz KUŚ
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12749">
+                            Łukasz Sysło
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: II liga okręgowa A1 Junior
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224790" style="background-color: ;">
+                    <td class="first">46</td>
+                    <td>Pogoria Pogórska Wola</td>
+                    <td>Unia Tarnów</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>10:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="STADION POGÓRSKA WOLA ( GŁÓWNY ) (Pogórska Wola 378 B)">
+                            STADION POGÓRSKA WOLA ( GŁÓWNY ) (Pogórska Wola 378 B)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12750">
+                            Wiktor Hajduk
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13896">
+                            Adrian Jasiak
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30124">
+                            Paweł Roślicki
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224791" style="background-color: ;">
+                    <td class="first">47</td>
+                    <td>Orzeł Zbylitowska Góra</td>
+                    <td>GKS Gromnik</td>
+                    <td>1 września 2026</td>
+                    <td>18:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="UKS Orzeł Zbylitowska Góra (Zbylitowska Góra, Sportowa 1)">
+                            UKS Orzeł Zbylitowska Góra (Zbylitowska Góra, Sportowa 1)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13993">
+                            Kacper Breński
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14219">
+                            Przemysław Stepek
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13990">
+                            Kazimierz Dynarowicz
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    II liga wojewódzka B1 Junior Młodszy &quot;Małopolska&quot; Grupa wsch.
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224792" style="background-color: ;">
+                    <td class="first">49</td>
+                    <td>Unia Tarnów</td>
+                    <td>Bruk-Bet Termalica Nieciecza</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>10:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion Sportowy (Wola Rzędzińska 435D)">
+                            Stadion Sportowy (Wola Rzędzińska 435D)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13921">
+                            Jakub Bryl
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13895">
+                            Mariusz KUŚ
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13889">
+                            Mateusz Różycki
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: I liga okręgowa B1 Junior Młodszy
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224793" style="background-color: ;">
+                    <td class="first">51</td>
+                    <td>Tuchovia Tuchów</td>
+                    <td>Polan Żabno</td>
+                    <td>31 sierpnia 2026</td>
+                    <td>17:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Dolne boisko treningowe w Tuchowie (Tuchów, Stefana Żeromskiego 3A)">
+                            Dolne boisko treningowe w Tuchowie (Tuchów, Stefana Żeromskiego 3A)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14220">
+                            Arkadiusz Truchan
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="39363">
+                            Piotr Gębski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13993">
+                            Kacper Breński
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224794" style="background-color: ;">
+                    <td class="first">52</td>
+                    <td>Orzeł Zbylitowska Góra</td>
+                    <td>AP English Football Zakliczyn</td>
+                    <td>31 sierpnia 2026</td>
+                    <td>16:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="UKS Orzeł Zbylitowska Góra (Zbylitowska Góra, Sportowa 1)">
+                            UKS Orzeł Zbylitowska Góra (Zbylitowska Góra, Sportowa 1)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30124">
+                            Paweł Roślicki
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13889">
+                            Mateusz Różycki
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14283">
+                            Tomasz Pilarski
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224795" style="background-color: ;">
+                    <td class="first">53</td>
+                    <td>Mościce 20 Tarnów</td>
+                    <td>Orzeł Zbylitowska Góra</td>
+                    <td>4 września 2026</td>
+                    <td>17:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion Sportowy TOSiR im. Emila Wzorka (Tarnów, Józefa Piłsudskiego 32)">
+                            Stadion Sportowy TOSiR im. Emila Wzorka (Tarnów, Józefa Piłsudskiego 32)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30552">
+                            Krzysztof Martowicz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12753">
+                            Filip Pinas
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13986">
+                            Marcin Madejski
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224796" style="background-color: ;">
+                    <td class="first">54</td>
+                    <td>Orzeł Lisia Góra</td>
+                    <td>Dąbrovia Dąbrowa Tarnowska</td>
+                    <td>4 września 2026</td>
+                    <td>19:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Centrum Sportu w Lisiej Górze (Lisia Góra, Sportowa 15)">
+                            Centrum Sportu w Lisiej Górze (Lisia Góra, Sportowa 15)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14093">
+                            Michał Hałoń
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30189">
+                            Dariusz Roślicki
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14283">
+                            Tomasz Pilarski
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: II liga okręgowa B1 Junior Młodszy
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224797" style="background-color: ;">
+                    <td class="first">56</td>
+                    <td>AP Wierzchosławice</td>
+                    <td>KS Nowa Jastrząbka- Żukowice</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>10:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LKS Dunajec Mikołajowice (Mikołajowice 199)">
+                            LKS Dunajec Mikołajowice (Mikołajowice 199)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14053">
+                            Marek Krakowski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12752">
+                            Jarosław Wroński
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13990">
+                            Kazimierz Dynarowicz
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224798" style="background-color: ;">
+                    <td class="first">57</td>
+                    <td>LKS Zgłobice</td>
+                    <td>KS Radlna</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion LKS Zgłobice (Zgłobice 8)">
+                            Stadion LKS Zgłobice (Zgłobice 8)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13905">
+                            Rafał Zaucha
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13557">
+                            Dominik Stolarz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13922">
+                            Bogusław Szarad
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224799" style="background-color: ;">
+                    <td class="first">58</td>
+                    <td>Pogórze Pleśna</td>
+                    <td>LKS Łęgovia Łęg Tarnowski</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Relax Arena (Łowczówek 63)">
+                            Relax Arena (Łowczówek 63)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13896">
+                            Adrian Jasiak
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14119">
+                            Marcin Drzyzga
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14093">
+                            Michał Hałoń
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224800" style="background-color: ;">
+                    <td class="first">59</td>
+                    <td>KS Rzuchowa</td>
+                    <td>Alfa Siedliska</td>
+                    <td>2 września 2026</td>
+                    <td>17:45</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="KS Rzuchowa (Rzuchowa 17)">
+                            KS Rzuchowa (Rzuchowa 17)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    
+                        #FF6666
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12749">
+                            Łukasz Sysło
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30124">
+                            Paweł Roślicki
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13990">
+                            Kazimierz Dynarowicz
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: B1 Junior Młodszy &quot;Liga Regionalna&quot; Grupa wsch.
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224801" style="background-color: ;">
+                    <td class="first">61</td>
+                    <td>Wolania Wola Rzędzińska</td>
+                    <td>Westovia Tarnów</td>
+                    <td>31 sierpnia 2026</td>
+                    <td>18:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LKS WOLANIA WOLA RZĘDZIŃSKA STADION SPORTOWY ZE SZTUCZNĄ MURAWĄ (Wola Rzędzińska 435 D)">
+                            LKS WOLANIA WOLA RZĘDZIŃSKA STADION SPORTOWY ZE SZTUCZNĄ MURAWĄ (Wola Rzędzińska 435 D)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30552">
+                            Krzysztof Martowicz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12752">
+                            Jarosław Wroński
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14092">
+                            Miłosz Różycki
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    I liga wojewódzka C1 Trampkarz &quot;Małopolska Liga Trampkarek U-16&quot;
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224802" style="background-color: ;">
+                    <td class="first">63</td>
+                    <td>TS Iskra II Tarnów</td>
+                    <td>Targowianka Targowisko</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>16:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="STADION SPORTOWY W WOLI RZĘDZIŃSKIEJ (Wola Rzędzińska 435 D)">
+                            STADION SPORTOWY W WOLI RZĘDZIŃSKIEJ (Wola Rzędzińska 435 D)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13906">
+                            Sylwia Wiatr
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="39363">
+                            Piotr Gębski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14088">
+                            Ryszard Miśtak
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: I liga okręgowa C1 Trampkarz
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224803" style="background-color: ;">
+                    <td class="first">65</td>
+                    <td>Iskra Tarnów</td>
+                    <td>Łęgovia Łęg Tarnowski</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Gminne Centrum Sportu Lisia Góra (Lisia Góra, Sportowa 16)">
+                            Gminne Centrum Sportu Lisia Góra (Lisia Góra, Sportowa 16)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13990">
+                            Kazimierz Dynarowicz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224804" style="background-color: ;">
+                    <td class="first">66</td>
+                    <td>AP Wierzchosławice</td>
+                    <td>Wolania Wola Rzędzińska</td>
+                    <td>31 sierpnia 2026</td>
+                    <td>16:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LKS Rudka (Rudka 87)">
+                            LKS Rudka (Rudka 87)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13557">
+                            Dominik Stolarz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224805" style="background-color: ;">
+                    <td class="first">67</td>
+                    <td>Wolania Wola Rzędzińska</td>
+                    <td>Wisła Szczucin</td>
+                    <td>3 września 2026</td>
+                    <td>16:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LKS WOLANIA WOLA RZĘDZIŃSKA STADION SPORTOWY ZE SZTUCZNĄ MURAWĄ (Wola Rzędzińska 435 D)">
+                            LKS WOLANIA WOLA RZĘDZIŃSKA STADION SPORTOWY ZE SZTUCZNĄ MURAWĄ (Wola Rzędzińska 435 D)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13899">
+                            Marcel Cholewa
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: II liga okręgowa C1 Trampkarz Grupa 1
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224806" style="background-color: ;">
+                    <td class="first">69</td>
+                    <td>Westovia II Tarnów</td>
+                    <td>LKS Szynwałd</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>16:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Boisko WP ul. Wojska Polskiego (Tarnów, Wojska Polskiego 14)">
+                            Boisko WP ul. Wojska Polskiego (Tarnów, Wojska Polskiego 14)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14220">
+                            Arkadiusz Truchan
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224807" style="background-color: ;">
+                    <td class="first">70</td>
+                    <td>Orzeł Zbylitowska Góra</td>
+                    <td>KS Biała</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>14:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="UKS Orzeł Zbylitowska Góra (Zbylitowska Góra, Sportowa 1)">
+                            UKS Orzeł Zbylitowska Góra (Zbylitowska Góra, Sportowa 1)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13990">
+                            Kazimierz Dynarowicz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224808" style="background-color: ;">
+                    <td class="first">71</td>
+                    <td>KS Nowa Jastrząbka- Żukowice</td>
+                    <td>Metal Tarnów</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>14:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Nowa Jastrząbka (Nowa Jastrząbka 34b)">
+                            Nowa Jastrząbka (Nowa Jastrząbka 34b)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13922">
+                            Bogusław Szarad
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224809" style="background-color: ;">
+                    <td class="first">72</td>
+                    <td>Orzeł Lisia Góra</td>
+                    <td>Arkadia Olszyny / Olimpia Wojnicz</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>14:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14086">
+                            Vadzim Raksa
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224810" style="background-color: ;">
+                    <td class="first">73</td>
+                    <td>Mościce 20 Tarnów II</td>
+                    <td>AP English Football II Zakliczyn</td>
+                    <td>31 sierpnia 2026</td>
+                    <td>17:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="ZBS TOSIR (Tarnów, Wojska Polskiego 14)">
+                            ZBS TOSIR (Tarnów, Wojska Polskiego 14)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30453">
+                            Emil Merchut
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: II liga okręgowa C1 Trampkarz Grupa 2
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224811" style="background-color: ;">
+                    <td class="first">75</td>
+                    <td>AP English Football/KS Tarnowiec</td>
+                    <td>Pogoria Pogórska Wola</td>
+                    <td>28 sierpnia 2026</td>
+                    <td>18:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="KS TARNOWIEC (Tarnowiec, Sportowa 21)">
+                            KS TARNOWIEC (Tarnowiec, Sportowa 21)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13557">
+                            Dominik Stolarz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224812" style="background-color: ;">
+                    <td class="first">76</td>
+                    <td>Alfa Siedliska</td>
+                    <td>Olszynka Ołpiny</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>11:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion Stawiska w Siedliskach (Siedliska 415)">
+                            Stadion Stawiska w Siedliskach (Siedliska 415)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14118">
+                            Krzysztof Surdel
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224813" style="background-color: ;">
+                    <td class="first">77</td>
+                    <td>LKS Ładna</td>
+                    <td>KS Rzepiennik Strzyżewski</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>15:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LKS ŁADNA (Ładna 92L)">
+                            LKS ŁADNA (Ładna 92L)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13990">
+                            Kazimierz Dynarowicz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224814" style="background-color: ;">
+                    <td class="first">78</td>
+                    <td>LKS Olszyny</td>
+                    <td>Luks Skrzyszów</td>
+                    <td>31 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Olszyny (Olszyny 62)">
+                            Olszyny (Olszyny 62)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    
+                        #FF6666
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14219">
+                            Przemysław Stepek
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Żabno: I liga okręgowa C1 Trampkarz &quot;&quot;Regionalna Liga Trampkarzy - Wschód&quot;&quot;
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224815" style="background-color: ;">
+                    <td class="first">80</td>
+                    <td>AP English Football I</td>
+                    <td>GKS Gromnik</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>10:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="KS TARNOWIEC (Tarnowiec, Sportowa 21)">
+                            KS TARNOWIEC (Tarnowiec, Sportowa 21)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12749">
+                            Łukasz Sysło
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224816" style="background-color: ;">
+                    <td class="first">81</td>
+                    <td>Westovia Tarnów</td>
+                    <td>Dunajec Zakliczyn</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>14:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Boisko WP ul. Wojska Polskiego (Tarnów, Wojska Polskiego 14)">
+                            Boisko WP ul. Wojska Polskiego (Tarnów, Wojska Polskiego 14)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13902">
+                            waleria raksa
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    C2 Trampkarz &quot;Małopolska Liga &quot;2013&quot;&quot; Grupa 2
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224817" style="background-color: ;">
+                    <td class="first">83</td>
+                    <td>Tarnovia Tarnów</td>
+                    <td>Pogoń Kraków</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Miejski Klub Sportowy TARNOVIA (Tarnów, Wojciecha Bandrowskiego 9)">
+                            Miejski Klub Sportowy TARNOVIA (Tarnów, Wojciecha Bandrowskiego 9)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13892">
+                            Dominik Hołda
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14118">
+                            Krzysztof Surdel
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14088">
+                            Ryszard Miśtak
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    II liga wojewódzka D1 Młodzik &quot;Małopolska&quot; Grupa 1
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224819" style="background-color: ;">
+                    <td class="first">85</td>
+                    <td>Tarnovia Tarnów</td>
+                    <td>AserekTeam Gorlice</td>
+                    <td>2 września 2026</td>
+                    <td>18:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Miejski Klub Sportowy TARNOVIA (Tarnów, Wojciecha Bandrowskiego 9)">
+                            Miejski Klub Sportowy TARNOVIA (Tarnów, Wojciecha Bandrowskiego 9)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14092">
+                            Miłosz Różycki
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30453">
+                            Emil Merchut
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30717">
+                            Michał Chorąży
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Bochnia: I liga okręgowa D1 Młodzik &quot;Regionalna Liga Młodzików - Wschód&quot;
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224820" style="background-color: ;">
+                    <td class="first">87</td>
+                    <td>Westovia Tarnów</td>
+                    <td>Okocimski Klub Sportowy Brzesko</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>10:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Boisko WP ul. Wojska Polskiego (Tarnów, Wojska Polskiego 14)">
+                            Boisko WP ul. Wojska Polskiego (Tarnów, Wojska Polskiego 14)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13902">
+                            waleria raksa
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224821" style="background-color: ;">
+                    <td class="first">88</td>
+                    <td>AP English Football Zakliczyn</td>
+                    <td>Wisła Szczucin</td>
+                    <td>31 sierpnia 2026</td>
+                    <td>10:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LKS ORZEŁ w Stróżach (Stróże 88)">
+                            LKS ORZEŁ w Stróżach (Stróże 88)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13557">
+                            Dominik Stolarz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: I liga okręgowa D1 Młodzik
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224822" style="background-color: ;">
+                    <td class="first">90</td>
+                    <td>Dunajec Zakliczyn</td>
+                    <td>Termalica II Bruk-Bet Nieciecza</td>
+                    <td>28 sierpnia 2026</td>
+                    <td>17:15</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Kompleks Sportowo - Rekreacyjny &quot;Kamieniec&quot; - boisko główne (Zakliczyn, Kamieniec 17)">
+                            Kompleks Sportowo - Rekreacyjny &quot;Kamieniec&quot; - boisko główne (Zakliczyn, Kamieniec 17)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30189">
+                            Dariusz Roślicki
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224823" style="background-color: ;">
+                    <td class="first">91</td>
+                    <td>Ciężkowianka Ciężkowice</td>
+                    <td>Tarnovia Tarnów</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>10:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion Sportowy Ciężkowianki Ciężkowice (Ciężkowice, Krynicka 10)">
+                            Stadion Sportowy Ciężkowianki Ciężkowice (Ciężkowice, Krynicka 10)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13905">
+                            Rafał Zaucha
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: II liga okręgowa D1 Młodzik
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224824" style="background-color: ;">
+                    <td class="first">93</td>
+                    <td>KS Rzuchowa</td>
+                    <td>Wolania Wola Rzędzińska</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>10:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="KS Rzuchowa (Rzuchowa 17)">
+                            KS Rzuchowa (Rzuchowa 17)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14092">
+                            Miłosz Różycki
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224825" style="background-color: ;">
+                    <td class="first">94</td>
+                    <td>AP English Football/KS Tarnowiec</td>
+                    <td>Olimpia Wojnicz</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>10:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="KS TARNOWIEC (Tarnowiec, Sportowa 21)">
+                            KS TARNOWIEC (Tarnowiec, Sportowa 21)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14086">
+                            Vadzim Raksa
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224826" style="background-color: ;">
+                    <td class="first">95</td>
+                    <td>Pogoria Pogórska Wola</td>
+                    <td>Gryf Pleśna</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>10:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="STADION POGÓRSKA WOLA ( K\ORLIKA ) (Pogórska Wola 88C)">
+                            STADION POGÓRSKA WOLA ( K\ORLIKA ) (Pogórska Wola 88C)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13889">
+                            Mateusz Różycki
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224827" style="background-color: ;">
+                    <td class="first">96</td>
+                    <td>Westovia KF Tarnów</td>
+                    <td>Unia II Tarnów</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>12:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Boisko WP ul. Wojska Polskiego (Tarnów, Wojska Polskiego 14)">
+                            Boisko WP ul. Wojska Polskiego (Tarnów, Wojska Polskiego 14)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13902">
+                            waleria raksa
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224828" style="background-color: ;">
+                    <td class="first">97</td>
+                    <td>Iskra Tarnów</td>
+                    <td>GAS Rozwój Szerzyny</td>
+                    <td>31 sierpnia 2026</td>
+                    <td>14:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Stadion Tosir Tarnów (Tarnów, Józefa Piłsudskiego 32)">
+                            Stadion Tosir Tarnów (Tarnów, Józefa Piłsudskiego 32)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30717">
+                            Michał Chorąży
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224829" style="background-color: ;">
+                    <td class="first">98</td>
+                    <td>Olimpia Wojnicz</td>
+                    <td>Wolania Wola Rzędzińska</td>
+                    <td>2 września 2026</td>
+                    <td>16:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LKS OLIMPIA WOJNICZ (Wojnicz, Warszawska 43)">
+                            LKS OLIMPIA WOJNICZ (Wojnicz, Warszawska 43)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14088">
+                            Ryszard Miśtak
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224830" style="background-color: ;">
+                    <td class="first">99</td>
+                    <td>AP English Football/KS Tarnowiec</td>
+                    <td>Iskra Tarnów</td>
+                    <td>4 września 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="KS TARNOWIEC (Tarnowiec, Sportowa 21)">
+                            KS TARNOWIEC (Tarnowiec, Sportowa 21)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30453">
+                            Emil Merchut
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: III liga okręgowa D1 Młodzik
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224831" style="background-color: ;">
+                    <td class="first">101</td>
+                    <td>KS Nowa Jastrząbka- Żukowice</td>
+                    <td>Alfa Siedliska</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>10:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Nowa Jastrząbka (Nowa Jastrząbka 34b)">
+                            Nowa Jastrząbka (Nowa Jastrząbka 34b)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13922">
+                            Bogusław Szarad
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224832" style="background-color: ;">
+                    <td class="first">102</td>
+                    <td>GKS Gromnik</td>
+                    <td>Tuchovia Tuchów</td>
+                    <td>31 sierpnia 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="GKS Gromnik (Gromnik, Sportowa 2)">
+                            GKS Gromnik (Gromnik, Sportowa 2)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13900">
+                            Sebastian Wiśniowski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224833" style="background-color: ;">
+                    <td class="first">103</td>
+                    <td>TS Iskra Tarnów</td>
+                    <td>LKS Szynwałd</td>
+                    <td>31 sierpnia 2026</td>
+                    <td>17:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Boisko sportowe Szynwałd (Szynwałd 34)">
+                            Boisko sportowe Szynwałd (Szynwałd 34)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13923">
+                            Mateusz Łabno
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224834" style="background-color: ;">
+                    <td class="first">104</td>
+                    <td>Orzeł Zbylitowska Góra</td>
+                    <td>Błękitni 1947 Tarnów</td>
+                    <td>31 sierpnia 2026</td>
+                    <td>18:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="UKS Orzeł Zbylitowska Góra (Zbylitowska Góra, Sportowa 1)">
+                            UKS Orzeł Zbylitowska Góra (Zbylitowska Góra, Sportowa 1)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14093">
+                            Michał Hałoń
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224835" style="background-color: ;">
+                    <td class="first">105</td>
+                    <td>AP English Football Zakliczyn II</td>
+                    <td>Mościce 20 Tarnów</td>
+                    <td>1 września 2026</td>
+                    <td>14:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LKS ORZEŁ w Stróżach (Stróże 88)">
+                            LKS ORZEŁ w Stróżach (Stróże 88)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14118">
+                            Krzysztof Surdel
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: IV liga okręgowa D1 Młodzik Grupa 1
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224836" style="background-color: ;">
+                    <td class="first">107</td>
+                    <td>Westovia WS Tarnów</td>
+                    <td>Lisek Lisia Góra</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>14:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Boisko WP ul. Wojska Polskiego (Tarnów, Wojska Polskiego 14)">
+                            Boisko WP ul. Wojska Polskiego (Tarnów, Wojska Polskiego 14)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14220">
+                            Arkadiusz Truchan
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224837" style="background-color: ;">
+                    <td class="first">108</td>
+                    <td>AP Wierzchosławice II</td>
+                    <td>Iskra II Tarnów</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>12:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LKS Rudka (Rudka 87)">
+                            LKS Rudka (Rudka 87)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14088">
+                            Ryszard Miśtak
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224838" style="background-color: ;">
+                    <td class="first">109</td>
+                    <td>Mościce 20 Tarnów II</td>
+                    <td>KS Biała</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>12:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="ZBS TOSIR (Tarnów, Wojska Polskiego 14)">
+                            ZBS TOSIR (Tarnów, Wojska Polskiego 14)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14053">
+                            Marek Krakowski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224839" style="background-color: ;">
+                    <td class="first">110</td>
+                    <td>AP English Football/KS Koszyce Wielkie</td>
+                    <td>Wolania II Wola Rzędzińska</td>
+                    <td>2 września 2026</td>
+                    <td>17:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="KS Koszyce Wielkie (Koszyce Wielkie, Szkolna 22)">
+                            KS Koszyce Wielkie (Koszyce Wielkie, Szkolna 22)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30552">
+                            Krzysztof Martowicz
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Tarnów: IV liga okręgowa D1 Młodzik Grupa 2
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224840" style="background-color: ;">
+                    <td class="first">112</td>
+                    <td>KS Rzuchowa II</td>
+                    <td>LUKS Skrzyszów</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>10:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="KS Rzuchowa (Rzuchowa 17)">
+                            KS Rzuchowa (Rzuchowa 17)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14088">
+                            Ryszard Miśtak
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224841" style="background-color: ;">
+                    <td class="first">113</td>
+                    <td>Westovia KK Tarnów</td>
+                    <td>Unia III Tarnów</td>
+                    <td>29 sierpnia 2026</td>
+                    <td>12:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Boisko WP ul. Wojska Polskiego (Tarnów, Wojska Polskiego 14)">
+                            Boisko WP ul. Wojska Polskiego (Tarnów, Wojska Polskiego 14)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14220">
+                            Arkadiusz Truchan
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224842" style="background-color: ;">
+                    <td class="first">114</td>
+                    <td>Wolania III Wola Rzędzińska</td>
+                    <td>Forza Tarnów</td>
+                    <td>30 sierpnia 2026</td>
+                    <td>10:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LKS WOLANIA WOLA RZĘDZIŃSKA STADION SPORTOWY ZE SZTUCZNĄ MURAWĄ (Wola Rzędzińska 435 D)">
+                            LKS WOLANIA WOLA RZĘDZIŃSKA STADION SPORTOWY ZE SZTUCZNĄ MURAWĄ (Wola Rzędzińska 435 D)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30124">
+                            Paweł Roślicki
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224843" style="background-color: ;">
+                    <td class="first">115</td>
+                    <td>KS Łękawica</td>
+                    <td>Ciężkowianka II Ciężkowice</td>
+                    <td>31 sierpnia 2026</td>
+                    <td>17:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Łękawica (Łękawica 58A)">
+                            Łękawica (Łękawica 58A)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="30189">
+                            Dariusz Roślicki
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Żabno: II liga okręgowa D1 Młodzik
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224844" style="background-color: ;">
+                    <td class="first">117</td>
+                    <td>AKADEMIA PIŁKARSKA WIERZCHOSŁAWICE</td>
+                    <td>LKS Łęgovia Łęg Tarnowski</td>
+                    <td>28 sierpnia 2026</td>
+                    <td>16:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LKS Rudka (Rudka 87)">
+                            LKS Rudka (Rudka 87)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14088">
+                            Ryszard Miśtak
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Separator z nazwą klasy -->
+                <tr style="background-color: #A9A9A9; color: white;">
+                <td class="colorSeparator" colspan="14" style="text-align: center; font-weight: bold; font-size: 15px;">
+                    Puchar Polski &quot;PPN Tarnów&quot;
+                </td>
+            </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224849" style="background-color: ;">
+                    <td class="first">119</td>
+                    <td>LUKS SKRZYSZÓW</td>
+                    <td>Dunajec Zbylitowska Góra</td>
+                    <td>1 września 2026</td>
+                    <td>17:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="LUKS SKRZYSZÓW (Skrzyszów 642)">
+                            LUKS SKRZYSZÓW (Skrzyszów 642)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13920">
+                            Grzegorz Wroński
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    
+                        #FF6666
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13897">
+                            Michał Ślaski
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12752">
+                            Jarosław Wroński
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224850" style="background-color: ;">
+                    <td class="first">120</td>
+                    <td>Tarnovia II Tarnów</td>
+                    <td>Zorza Zaczarnie</td>
+                    <td>2 września 2026</td>
+                    <td>17:00</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="Miejski Klub Sportowy TARNOVIA (Tarnów, Wojciecha Bandrowskiego 9)">
+                            Miejski Klub Sportowy TARNOVIA (Tarnów, Wojciecha Bandrowskiego 9)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13906">
+                            Sylwia Wiatr
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13895">
+                            Mariusz KUŚ
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="13557">
+                            Dominik Stolarz
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+            
+                <!-- Normalny wiersz z danymi meczu -->
+                <tr data-match-id="224851" style="background-color: ;">
+                    <td class="first">121</td>
+                    <td>GKS Gromnik</td>
+                    <td>Dunajec Zakliczyn</td>
+                    <td>2 września 2026</td>
+                    <td>17:30</td>
+                    <td>
+                        <a href="#" class="address-link" data-address="GKS Gromnik (Gromnik, Sportowa 2)">
+                            GKS Gromnik (Gromnik, Sportowa 2)
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="12756">
+                            Miłosz Cygan
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14219">
+                            Przemysław Stepek
+                        </a>
+                    </td>
+                    <td style="background-color:
+                    ;">
+                        <a href="#" class="referee-link" data-referee-id="14053">
+                            Marek Krakowski
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="#" class="referee-link" data-referee-id="">
+                            
+                        </a>
+                    </td>
+                    
+                    
+                    
+                    
+                    
+                </tr>
+            
+        
+    </tbody>
+    </table>
+</div>
+<script>
+    document.querySelector('.dropbtn3').addEventListener('click', function() {
+    let content = document.querySelector('.dropdown-content3');
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
+});
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        let rowCounter = -1;
+        $('tr').each(function() {
+            // Sprawdź, czy wiersz nie jest separatorem
+            if (!$(this).find('td[colspan="11"]').length) {
+                // Jeśli nie jest separatorem, zwiększ licznik i ustaw numer wiersza
+                rowCounter++;
+                $(this).find('td.first').text(rowCounter);
+            }
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const refs = document.querySelectorAll('.referee-link');
+  refs.forEach(ref => {
+    ref.addEventListener('click', function(e) {
+      e.preventDefault();
+      const refereeId = this.getAttribute('data-referee-id');
+      fetch(`/referee-details/${refereeId}`)
+        .then(response => response.json())
+        .then(data => {
+          showModal(data, this); // Przekazanie this jako element
+        })
+        .catch(error => console.error('Error:', error));
+    });
+  });
+  const addresses = document.querySelectorAll('.address-link');
+   addresses.forEach(address => {
+     address.addEventListener('click', function(e) {
+       e.preventDefault();
+       const matchAddress = this.getAttribute('data-address');
+       showAddressModal(matchAddress, this); // Wyświetlanie modala z adresem
+     });
+   });
+});
+</script>
+<script>
+  function showModal(data, element) {
+  var modal = document.getElementById('refereeModal');
+  var span = document.getElementsByClassName("close")[0];
+  var details = document.getElementById('refereeDetails');
+
+  const addressLine = data.address ? `<br>Adres: ${data.address}` : '';
+  details.innerHTML = `Imię: ${data.name}<br>Nazwisko: ${data.surname}<br>Telefon: ${data.phone_number}${addressLine}`;
+
+  // Obliczanie pozycji elementu
+  const rect = element.getBoundingClientRect();
+  modal.style.top = `${window.scrollY + rect.bottom + 5}px`; // Ustawienie modala poniżej klikniętego elementu, dodaj 5 pikseli dla odstępu
+  modal.style.left = `${rect.left + window.scrollX}px`; // Pozycjonowanie lewej krawędzi modala na lewej krawędzi elementu
+  modal.style.display = "block";
+
+  // Zamknięcie modala przy kliknięciu na 'x'
+  span.onclick = function() {
+    modal.style.display = "none";
+  };
+
+  // Zamknięcie modala przy kliknięciu poza jego obszarem
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+}
+</script>
+<script>
+    function showAddressModal(address, element) {
+   var modal = document.getElementById('refereeModal'); // Używamy istniejącego modala
+   var span = document.getElementsByClassName("close")[0];
+   var details = document.getElementById('refereeDetails');
+
+   details.innerHTML = `Adres Meczu: ${address}`;
+
+   // Obliczanie pozycji elementu
+   const rect = element.getBoundingClientRect();
+   modal.style.top = `${window.scrollY + rect.bottom + 5}px`;
+   modal.style.left = `${rect.left + window.scrollX}px`;
+   modal.style.display = "block";
+
+   // Zamknięcie modala przy kliknięciu na 'x'
+   span.onclick = function() {
+     modal.style.display = "none";
+   };
+
+   // Zamknięcie modala przy kliknięciu poza jego obszarem
+   window.onclick = function(event) {
+     if (event.target == modal) {
+       modal.style.display = "none";
+     }
+   };
+}
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.getElementById('toggleTable');
+        const table = document.querySelector('.custom-table');
+        let expanded = false;
+
+        btn.addEventListener('click', function () {
+            expanded = !expanded;
+            if (expanded) {
+                table.classList.add('wide-table');
+                btn.innerHTML = '<i class="fas fa-compress-arrows-alt"></i> Zwiń';
+            } else {
+                table.classList.remove('wide-table');
+                btn.innerHTML = '<i class="fas fa-expand-arrows-alt"></i> Rozszerz';
+            }
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.getElementById('toggleTable2');
+        const table = document.querySelector('.custom-table');
+        let expanded = false;
+
+        btn.addEventListener('click', function () {
+            expanded = !expanded;
+            if (expanded) {
+                table.classList.add('wide-table');
+                btn.innerHTML = '<i class="fas fa-compress-arrows-alt"></i> Zwiń';
+            } else {
+                table.classList.remove('wide-table');
+                btn.innerHTML = '<i class="fas fa-expand-arrows-alt"></i> Rozszerz';
+            }
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
